@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-project (ympd)
+project (zmpd)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/")
 set(CPACK_PACKAGE_VERSION_MAJOR "1")
 set(CPACK_PACKAGE_VERSION_MINOR "2")
@@ -46,7 +46,7 @@ file(GLOB RESOURCES
 )
 
 set(SOURCES
-    src/ympd.c
+    src/zmpd.c
     src/mpd_client.c
     src/mongoose.c
     src/json_encode.c
@@ -69,11 +69,11 @@ if(NOT WITH_DYNAMIC_ASSETS)
     list(APPEND SOURCES src/http_server.c assets.c)
 endif()
 
-add_executable(ympd ${SOURCES})
-target_link_libraries(ympd ${LIBMPDCLIENT_LIBRARY} ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES})
+add_executable(zmpd ${SOURCES})
+target_link_libraries(zmpd ${LIBMPDCLIENT_LIBRARY} ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES})
 
-install(TARGETS ympd DESTINATION bin)
-install(FILES ympd.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/share/man/man1)
+install(TARGETS zmpd DESTINATION bin)
+install(FILES zmpd.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/share/man/man1)
 if(WITH_DYNAMIC_ASSETS)
     install(DIRECTORY htdocs DESTINATION share/${PROJECT_NAME})
 endif()
