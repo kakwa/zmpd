@@ -1,13 +1,23 @@
-[![Build Status](https://travis-ci.org/notandy/ympd.svg)](https://travis-ci.org/notandy/ympd)
-ympd
+[![Build Status](https://travis-ci.org/kakwa/zmpd.svg)](https://travis-ci.org/kakwa/zmpd)
+zmpd
 ====
 
 Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS
 
+This is a fork of ympd with some UI changes (http://www.ympd.org).
 
-http://www.ympd.org
+Disclamer
+=========
 
-![ScreenShot](http://www.ympd.org/assets/ympd_github.png)
+Right now, there is not a lot of changes, the fork is in its early stage.
+
+Changes wanted:
+* |[ ]| having a more finder like view of the library (like ncmpcpp)
+* |[ ]| add support for a configuration file (ini file)
+* |[ ]| better internationalization
+* |[ ]| make the display of confusing parameters optional (like the the sound output)
+* |[ ]| if possible, merge the queue and "browse database" screen for a more intuitive layout
+
 
 Dependencies
 ------------
@@ -21,12 +31,12 @@ Unix Build Instructions
 2. create build directory ```cd /path/to/src; mkdir build; cd build```
 3. create makefile ```cmake ..  -DCMAKE_INSTALL_PREFIX:PATH=/usr```
 4. build ```make```
-5. install ```sudo make install``` or just run with ```./ympd```
+5. install ```sudo make install``` or just run with ```./zmpd```
 
 Run flags
 ---------
 ```
-Usage: ./ympd [OPTION]...
+Usage: ./zmpd [OPTION]...
 
  -h, --host <host>          connect to mpd at host [localhost]
  -p, --port <port>          connect to mpd at port [6600]
@@ -38,16 +48,16 @@ Usage: ./ympd [OPTION]...
 
 SSL Support
 -----------
-To run ympd with SSL support:
+To run zmpd with SSL support:
 
 - create a certificate (key and cert in the same file), example:
 ```
 # openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 1000 -nodes
 # cat key.pem cert.pem > ssl.pem
 ```
-- tell ympd to use a webport using SSL and where to find the certificate: 
+- tell zmpd to use a webport using SSL and where to find the certificate: 
 ```
-# ./ympd -w "ssl://8081:/path/to/ssl.pem"
+# ./zmpd -w "ssl://8081:/path/to/ssl.pem"
 ```
 
 Copyright
