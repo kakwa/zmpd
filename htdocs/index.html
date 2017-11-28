@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ympd - fast and lightweight MPD webclient">
+  <meta name="description" content="zmpd - fast and lightweight MPD webclient">
   <meta name="author" content="andy@ndyk.de">
 
-  <title>ympd</title>
+  <title>zmpd</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -28,14 +28,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-play-circle"></span> ympd</a>
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-play-circle"></span> zmpd</a>
       </div>
       <div class="collapse navbar-collapse">
 
         <ul id="nav_links" class="nav navbar-nav">
           <li id="queue"><a href="#/">Queue</a></li>
           <li id="browse"><a href="#/browse/0/">Browse database</a></li>
-          <li id="dirble"><a href="#/dirble/">Dirble</a></li>
           <li><a href="#" data-toggle="modal" data-target="#addstream">Add Stream</a></li>
           <li><a href="#" data-toggle="modal" data-target="#settings" onclick="getHost();">Settings</a></li>
         </ul>
@@ -118,28 +117,6 @@
             </tbody>
           </table>
 
-          <div id="dirble_panel">
-            <p id="dirble_loading" style="font-size:16px;font-weight:bold;margin-left:4em;">Loading...</p>
-            <table style="float:right; width:44%; margin-right:4%;" id="dirble_right" class="table table-hover">
-                <thead>
-                <tr>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-            <table style="width:44%; margin-left:4%;" id="dirble_left" class="table table-hover">
-                <thead>
-                <tr>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-
         </div><!-- /.panel -->
         <ul class="pager">
           <li id="prev" class="page-btn hide"><a href="">Previous</a></li>
@@ -197,10 +174,10 @@
           <h2 class="modal-title" id="settingsLabel"><span class="glyphicon glyphicon-wrench"></span> Settings</h2>
         </div>
         <div class="modal-body">
-          <h4><a href="http://www.ympd.org"><span class="glyphicon glyphicon-play-circle"></span> ympd</a>&nbsp;&nbsp;&nbsp;<small>MPD Web GUI - written in C, utilizing Websockets and Bootstrap/JS</small></h4>
+          <h4><a href="http://www.zmpd.org"><span class="glyphicon glyphicon-play-circle"></span> zmpd</a>&nbsp;&nbsp;&nbsp;<small>MPD Web GUI - written in C, utilizing Websockets and Bootstrap/JS</small></h4>
           <p>
-          ympd is a lightweight MPD (Music Player Daemon) web client that runs without a dedicated webserver or interpreters like PHP, NodeJS or Ruby. It's tuned for minimal resource usage and requires only very litte dependencies.</p>
-          <h5>ympd uses following excellent software:</h5>
+          zmpd is a lightweight MPD (Music Player Daemon) web client that runs without a dedicated webserver or interpreters like PHP, NodeJS or Ruby. It's tuned for minimal resource usage and requires only very litte dependencies.</p>
+          <h5>zmpd uses following excellent software:</h5>
           <h6><a href="http://cesanta.com/docs.html">Mongoose</a> <small>GPLv2</small></h6>
           <h6><a href="http://www.musicpd.org/libs/libmpdclient/">libMPDClient</a> <small>BSD License</small></h6>
           <hr />
@@ -329,6 +306,7 @@
   <script src="js/bootstrap-notify.js"></script>
   <script src="js/bootstrap-slider.js"></script>
   <script src="js/sammy.js"></script>
+  <script src="js/finder.min.js"></script>
   <script src="js/mpd.js"></script>
 </body>
 </html>
