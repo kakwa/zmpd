@@ -39,6 +39,8 @@ endif()
 file(GLOB RESOURCES 
     RELATIVE ${PROJECT_SOURCE_DIR}
     htdocs/js/*
+    htdocs/static/css/*
+    htdocs/static/js/*
     htdocs/assets/*
     htdocs/css/*.css
     htdocs/fonts/*
